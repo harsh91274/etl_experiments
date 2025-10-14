@@ -18,7 +18,7 @@ EMR instance type configuration
 
 These defaults were chosen to balance availability and cost. To change them add the variables to your `.env` or environment and restart your Airflow environment (for example `astro dev restart`).
 
-snowflake_automation DAG (EMR workflow)
+## snowflake_automation DAG (EMR workflow)
 
 Purpose
 - Launch a transient EMR cluster, run ingest and transform steps (script + spark-submit), wait for steps to finish, terminate the cluster, and refresh data in Snowflake.
