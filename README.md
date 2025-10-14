@@ -10,3 +10,10 @@ Key points:
 - The DAG returns small results as JSON-serializable types (lists/dicts) to avoid XCom serialization issues.
 
 See `dags/README_astro_orders.md` for more details and troubleshooting notes.
+
+EMR instance type configuration
+- For the EMR demo DAG (`dags/airflow_empr_spark_s3_snowflake.py`) the cluster instance types are configurable via environment variables:
+	- `EMR_MASTER_INSTANCE_TYPE` (default: `m5.large`)
+	- `EMR_CORE_INSTANCE_TYPE` (default: `m5.large`)
+
+These defaults were chosen to balance availability and cost. To change them add the variables to your `.env` or environment and restart your Airflow environment (for example `astro dev restart`).
