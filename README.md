@@ -28,13 +28,18 @@ Key file
 
 Flow (high level)
 ```mermaid
-flowchart LR
-  A[create_emr_cluster] --> B[ingest_layer\n(add step)]
-  B --> C[poll_step_layer\n(wait for step)]
-  C --> D[transform_layer\n(add step)]
-  D --> E[poll_step_layer2\n(wait for step)]
-  E --> F[terminate_emr_cluster]
-  F --> G[snowflake_load\n(ALTER EXTERNAL TABLE REFRESH)]
+graph LR
+    A["create_emr_cluster"] --> B["ingest_layer"]
+    B --> C["poll_step_layer"]
+    C --> D["transform_layer"]
+    D --> E["poll_step_layer2"]
+    E --> F["terminate_emr_cluster"]
+    F --> G["snowflake_load"]
+    style B fill:#f9f,stroke:#333
+    style D fill:#f9f,stroke:#333
+    style C fill:#ff9,stroke:#333
+    style E fill:#ff9,stroke:#333
+    style G fill:#9ff,stroke:#333
 ```
 
 Inputs and outputs
