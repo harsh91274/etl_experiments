@@ -1,4 +1,4 @@
-# etl_experiments
+# Data Engineering experiments with Airflow, dbt, EMR, Iceberg and Snowflake
 data pipeline and warehousing experiments with Snowflake, Airflow and DBT
 
 ## astro_orders DAG
